@@ -14,6 +14,52 @@ $fa-font-path: '/assets/fonts/font-awesome/';
   padding: 0.2em 0;
 }
 
+html, body {
+  height: 100%
+}
+
+* {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: 'Roboto', sans-serif;
+  &::-moz-selection {
+    background: #52BBFF;
+    color: #fff;
+  }
+  &::selection {
+    background: #52BBFF;
+    color: #fff;
+  }
+}
+
+body {
+  font-size: .875rem;
+  color: #fff;
+  background-color: #2A2D34;
+  padding-top: 1px;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.label-section {
+  padding: 13px 0;
+  font-size: 14px;
+  color: #828386;
+  &.large-label {
+    font-size: 15px;
+    padding: 20px 0;
+  }
+}
+
+// BTN STYLES
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -24,5 +70,55 @@ $fa-font-path: '/assets/fonts/font-awesome/';
 // Component styles are injected through gulp
 /* inject:scss */
 @import 'main/main';
+@import 'tachyons';
 @import '../components/footer/footer';
 /* endinject */
+
+// CUSTOM TACHYONS
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.word-break {
+  word-break: break-word;
+}
+
+.f7 {
+  font-size: 0.75rem;
+}
+.f8 {
+  font-size: 0.65rem;
+}
+.f7-ns {
+  @media screen and (min-width: 30em) {
+    font-size: 0.75rem;
+  }
+}
+
+.green {
+  color: #38af33;
+}
+.bg-green {
+  background-color: #38af33;
+}
+
+.blue {
+  color: #3C82EB;
+}
+.bg-blue {
+  background-color: #3C82EB;
+}
+.b--blue {
+  border-color: #3C82EB;
+}
+.bg-purple {
+  background-color: #506FBF;
+}
+.bg-gray {
+  background-color: #363A41;
+}
+
+
+.bg-dark {
+  background-color: #363A41;
+}

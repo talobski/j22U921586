@@ -1,0 +1,52 @@
+.w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mb4
+  .mb2
+    .flex
+      .w-50.ba.b--white-05.br2.mr2
+        .pa2.pt3.pb3
+          .flex.items-center.justify-center
+            span.f7.fw3.white-50.tracked(ng-if="invoice.data") Invoice # {{invoice.data.id || ""}}
+      .w-50.ba.b--white-05.br2
+        .pa2.pt3.pb3
+          .flex.items-center.justify-center
+            span.f7.fw3.white-50.tracked(ng-if="invoice.data") Expires on {{moment(invoice.data.attributes.expires_in).format("MMM DD, YYYY")}}
+  .bg-dark.black.white.br2.overflow-hidden.animated.fadeInDown
+    .ma2
+      //- ===== items ===== -//
+      .mt2.pb2.bb.b--white-10(ng-repeat="item in invoice.data.attributes.invoice_items")
+        .flex.items-center
+          img.item-photo.mr2(ng-if="item.attributes.photo_url" src="{{'https://imgr.pocketmarket.com/unsafe/100x/smart/' + item.attributes.photo_url}}")
+          img.item-photo.mr2(ng-if="!item.attributes.photo_url" src="{{item.attributes.photo_url}}")
+          .w-100
+            .flex.items-center.justify-between
+              .item-details
+                h1.f6.fw3.ma0.white-80.mb1 {{item.attributes.name}}
+                .flex.justify-between
+                  .f7
+                    span {{item.attributes.price | currency:"₱"}}
+                    span {{" "}}
+                    span.white-40 &times;
+                    span {{" "}}
+                    span {{item.attributes.quantity}}
+              .item-total
+                span.f7.fw7.tracked {{item.attributes.price * item.attributes.quantity | currency:"₱"}}
+      .bg-white-10.br2
+        .pl2.pr2.overflow-hidden
+          //- ===== delivery fee ===== -//
+          .fee.flex.items-center.justify-between.mt2.pb2(ng-if="invoice.data.attributes.delivery_fee")
+            .flex.items-center
+              .fee__icon.fee__icon--delivery.br-100.bg-white.bg-center.contain.mr2
+              span.f7.fw3 Delivery Fee
+            span.f7.fw7(ng-if="invoice.data.attributes.delivery_fee === '0.00'") FREE
+            span.f7.fw7(ng-if="invoice.data.attributes.delivery_fee !== '0.00'") {{invoice.data.attributes.delivery_fee | currency:"₱"}}
+          //- ===== other fees ===== -//
+          .fee.flex.items-center.justify-between.mt2.pb2(ng-repeat="of in invoice.data.attributes.invoice_other_fees")
+            .flex.items-center
+              .fee__icon.fee__icon--other.br-100.bg-white.bg-center.contain.mr2
+              span.f7.fw3 {{of.attributes.name || "Other Fees"}}
+            span.f7.fw7 {{of.attributes.amount | currency:"₱"}}
+          //- ===== tax ===== -//
+          .fee.flex.items-center.justify-between.mt2.pb2(ng-if="invoice.data.attributes.computed_tax !== '0.00'")
+            .flex.items-center
+              .fee__icon.fee__icon--tax.br-100.bg-white.bg-center.contain.mr2
+              span.f7.fw3 Tax (12%)
+            span.f7.fw7 {{invoice.data.attributes.computed_tax | currency:"₱"}}

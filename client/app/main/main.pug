@@ -1,14 +1,53 @@
-header#banner.hero-unit
-  .container
-    h1 'Allo, 'Allo!
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
-
-.container
-  .row
-    .col-lg-12
-      h1.page-header Features:
-      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
-        li
-          a(href='#', uib-tooltip='{{thing.info}}')
-            | {{thing.name}}
+.invoice-main
+  .state.pending
+    .ma3.ma4-l
+      .tc.fw3.tracked.animated.fadeInDown You are Paying
+    .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
+      .bg-white.black.br2.animated.fadeInDown
+        .pa2
+          .mb0
+            .bb.br2.b--black-10
+              .pb2
+                .flex.items-center.justify-start
+                  img.merchant-photo.mr1.dib.br-100(src='images/merchant-logo.jpg')
+                  .flex.flex-column
+                    span.f7.fw7.black-80.word-break Krispy Kreme
+                    span.f7.fw3.black-40 Merchant
+          .mb2
+            .pt3.pb3.pt4-l.pb4-l
+              .flex.flex-column.tc
+                h1.f1.fw3.green.ma0 ₱726.00
+                span.f7.black-40.ttu.tracked Amount Due
+          .mb0
+            a.bg-blue.br2.pa3.tc.ttu.tracked.white.f7.fw7.db Proceed to payment
+    .ma3.ma4-l
+      .tc.fw3.tracked.animated.fadeInDown Invoice Details
+    .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mb4
+      .mb2
+        .flex
+          .w-50.ba.b--white-05.br2.mr2
+            .pa2.pt3.pb3
+              .flex.items-center.justify-center
+                span.f7.fw3.white-50.tracked Invoice # 1zRMdkZ
+          .w-50.ba.b--white-05.br2
+            .pa2.pt3.pb3
+              .flex.items-center.justify-center
+                span.f7.fw3.white-50.tracked Expires on Jul 13, 2017
+      .bg-dark.black.white.br2.overflow-hidden.animated.fadeInDown
+        .ma2
+          .mt2.pb2.bb.b--white-10
+            .flex.items-center
+              img.item-photo.mr2(src='images/item-image.jpg')
+              .w-100
+                .flex.items-center.justify-between
+                  .item-details
+                    h1.f6.fw3.ma0.white-80.mb1 Dozen Original Glaze
+                    .flex.justify-between
+                      .f7
+                        span ₱363.00
+                        span {{" "}}
+                        span.white-40 ×
+                        span {{" "}}
+                        span 2
+                  .item-total
+                    span.f7.fw7.tracked ₱726.00
