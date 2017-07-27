@@ -69,9 +69,13 @@ button {
 
 // Component styles are injected through gulp
 /* inject:scss */
+@import 'delivery-info/delivery-info';
 @import 'main/main';
+@import 'payment/payment';
+@import 'personal-info/personal-info';
 @import 'tachyons';
 @import '../components/footer/footer';
+@import '../components/themes/textbox';
 /* endinject */
 
 // CUSTOM TACHYONS

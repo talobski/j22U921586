@@ -15,13 +15,17 @@ import {
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
+import PersonalInfoComponent from './personal-info/personal-info.component';
+import DeliveryInfoComponent from './delivery-info/delivery-info.component';
+import PaymentComponent from './payment/payment.component';
+import SuccessComponent from './success/success.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 
 import './app.scss';
 
 angular.module('j22U921586App', [ngCookies, ngResource, ngSanitize, uiRouter, navbar, footer, main,
-  constants, util
+  PersonalInfoComponent, DeliveryInfoComponent, PaymentComponent, SuccessComponent, constants, util
 ])
   .config(routeConfig);
 

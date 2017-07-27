@@ -1,0 +1,47 @@
+.ma3.ma4-l
+  .tc.fw3.tracked.animated.fadeInDown Delivery Info
+.w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mt4.mt0-ns
+  form.form
+    .form-group
+      .mb4
+        input.form-control.input-reset(type='text', name='address1', ng-model='user.address_line_1', required='', autocomplete='off')
+        label Complete Address *
+        span.bar
+
+    .form-group
+      .mb4
+        input.form-control.input-reset(type='text', name='barangay', ng-model='user.barangay', required='', autocomplete='off')
+        label Barangay *
+        span.bar
+
+    .form-group
+      .mb4
+        input.form-control.input-reset(type='text', name='city', ng-model='user.city', required='', autocomplete='off')
+        label City *
+        span.bar
+
+    .form-group
+      .mb4
+        input.form-control.input-reset(type='text', name='zipcode', ng-pattern='/^[0-9]*$/', ng-model='user.zip_code', required='', autocomplete='off')
+        label Zip Code *
+        span.bar
+
+    .form-group
+      .mb4
+        input.form-control.input-reset(type='text', name='province', ng-model='user.province', required='', autocomplete='off')
+        label Province *
+        span.bar
+        
+    
+    .form-group
+      .mb4
+        .flex.justify-between
+          .flex.justify-end.order-2
+            button.bn.bg-blue.br2.pa3.tc.ttu.tracked.white.f7.fw7.db.order-3(ui-sref="payment")
+              span Continue
+            .mr3.order-2
+            button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.white.f7.fw7.db.order-1(ui-sref="personal-info")
+              span Back
+          .flex.justify-start.order-1
+            button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.white.f7.fw7.db(ng-show="false")
+              span Log out

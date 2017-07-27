@@ -1,0 +1,14 @@
+.address {
+  .delete {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    bottom: 50%;
+    right: 10px;
+    margin-bottom: -12px;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+}
