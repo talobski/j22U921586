@@ -41,7 +41,7 @@
     transition: all 0.2s ease-in-out;
   }
   input, input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="tel"] {
-    background: #2A2D34;
+    background: transparent;
     border: none;
     box-shadow: none;
     border-bottom: 1px solid #56585E;
@@ -50,7 +50,7 @@
     display: block;
     font-size: 15px;
     padding: 0;
-    color: #fff;
+    color: #000;
     &:focus {
       outline: none;
       box-shadow: none;

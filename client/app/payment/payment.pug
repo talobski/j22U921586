@@ -1,8 +1,8 @@
 .ma3.ma4-l
-  .tc.fw3.tracked.animated.fadeInDown Payment Summary
+  .tc.tracked.animated.fadeInDown.black-50 Payment Summary
 
 .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
-  .ba.b--white-10.br2.relative.pointer(ng-click="invoice.summaryAccordion = !invoice.summaryAccordion")
+  .bg-white.br2.relative.pointer(ng-click="invoice.summaryAccordion = !invoice.summaryAccordion")
     .absolute.white-bg.right-0.top-0.w3.h-100
       .h-100.w-100.flex.items-start.justify-center
         img.arrow-dropdown.o-50(ng-class='{ "arrow-up": invoice.summaryAccordion, "arrow-down": !invoice.summaryAccordion }' src="../../assets/images/arrow-dropdown.svg")
@@ -12,50 +12,50 @@
           .flex.flex-column.flex-row-ns.justify-center.justify-between-ns
             .w-50-ns.tr-ns
               .mb1.mb0-ns.mr2-ns
-                span.white-50.ttu.f7.tracked.tl-ns.animated.fadeIn Amount Due:
+                span.black-50.ttu.f7.tracked.tl-ns.animated.fadeIn Amount Due:
             .w-50-ns.tl-ns
               .mb1.mb0-ns
-                span.white.tr-ns.animated.fadeIn {{ 726.00 | currency:"₱"}}
+                span.black.tr-ns.animated.fadeIn {{ 726.00 | currency:"₱"}}
       .mt2(ng-show="invoice.summaryAccordion")
         .mb2
           .pb1
             .flex.flex-column.flex-row-ns.justify-center.justify-between-ns
               .w-50-ns.tr-ns
                 .mb1.mb0-ns.mr2-ns
-                  span.white-50.ttu.f7.tracked.tl-ns.animated.fadeIn Buyer Name:
+                  span.black-50.ttu.f7.tracked.tl-ns.animated.fadeIn Buyer Name:
               .w-50-ns.tl-ns
                 .mb1.mb0-ns
-                  span.white.tr-ns.animated.fadeIn John Doe
+                  span.black.tr-ns.animated.fadeIn John Doe
         .mb0
           .pb1
             .flex.flex-column.flex-row-ns.justify-center.justify-between-ns
               .w-50-ns.tr-ns
                 .mb1.mb0-ns.mr2-ns
-                  span.white-50.ttu.f7.tracked.tl-ns.animated.fadeIn Address:
+                  span.black-50.ttu.f7.tracked.tl-ns.animated.fadeIn Address:
               .w-50-ns.tl-ns
                 .mb1.mb0-ns
-                  span.white.tr-ns.animated.fadeIn Metro Manila, Philippines
+                  span.black.tr-ns.animated.fadeIn Metro Manila, Philippines
 
 .ma3.ma4-l
-  .tc.fw3.tracked.animated.fadeInDown How Do You Want To Pay?
+  .tc.tracked.animated.fadeInDown.black-50 How Do You Want To Pay?
   
 .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
   .flex.flex-wrap
 
     .w-50.w-33-ns.flex.flex-column.items-center.justify-center.pa3.pt0.pb3-ns
-      button.payment-option.bg-gray.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
+      button.payment-option.bg-white.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
         img.center(src="../../assets/images/payment_option_paypal.png" height="15px")
-      label.pt2.pb2.f7.tracked.white-50 PayPal
+      label.pt2.pb2.f7.tracked.black-50 PayPal
 
     .w-50.w-33-ns.flex.flex-column.items-center.justify-center.pa3.pt0.pb3-ns
-      button.payment-option.bg-gray.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
+      button.payment-option.bg-white.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
         img.center(src="../../assets/images/payment_option_bitcoin.png" height="15px")
-      label.pt2.pb2.f7.tracked.white-50 Bitcoin
+      label.pt2.pb2.f7.tracked.black-50 Bitcoin
 
     .w-50.w-33-ns.flex.flex-column.items-center.justify-center.pa3.pt0.pb3-ns
-      button.payment-option.bg-gray.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
+      button.payment-option.bg-white.bn.w-100.br2.flex.items-center.justify-center(ui-sref="success")
         img.center(src="../../assets/images/payment_option_cod.png" height="30px")
-      label.pt2.pb2.f7.tracked.white-50 COD
+      label.pt2.pb2.f7.tracked.black-50 COD
     
   .mb4
     .bt.b--white-10.pt3
@@ -64,5 +64,5 @@
           button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.white.f7.fw7.db(ng-show="false")
             span Log out
         .flex.justify-end
-          button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.white.f7.fw7.db(ui-sref="delivery-info")
+          button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.blue.f7.fw7.db(ui-sref="delivery-info")
             span Back

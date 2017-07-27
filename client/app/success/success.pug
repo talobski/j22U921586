@@ -4,24 +4,24 @@
       .mb4
         img.animated.fadeInDown(src="assets/images/illustration_success.svg")
       .mb1
-        h1.f3.fw3.ma0.animated.fadeIn Payment Complete!
+        h1.f3.fw3.ma0.animated.fadeIn.black Payment Complete!
       .mb4
-        p.white-50.lh-copy.ma0.animated.fadeIn(ng-if="Auth.isLoggedIn()")
+        p.black-50.lh-copy.ma0.animated.fadeIn(ng-if="Auth.isLoggedIn()")
           | You have successfully paid
           | {{invoice.data.attributes.total_amount || 0.00 | currency:"₱"}} 
           | to
           | {{invoice.included[0].attributes.store_name || "Store"}}
         //- p.white-50.lh-copy.ma0.animated.fadeIn(ng-if="!Auth.isLoggedIn()")
-        p.white-50.lh-copy.ma0.animated.fadeIn
+        p.black-50.lh-copy.ma0.animated.fadeIn
           | This invoice has already been paid.
 
 div(ng-include="'app/invoice/payment-summary.html'")
 //- INCLUDE AUTHENTICATION HERE LOGIN/REGISTER
 .w-100.mw5-ns.center.pl2.pr2.pl0-l.pr0-l
-  .invoice-action.bg-white-10.w-100.br2.mb4.animated.fadeIn
+  .invoice-action.bg-white.w-100.br2.mb4.animated.fadeIn
     div
       .pa2(ui-sref="main")
         .tl.mb3
-          p.f7.white-50.lh-copy.ma0 Do you want to back and start over again?
+          p.f7.black-50.lh-copy.ma0 Do you want to back and start over again?
         .tr
-          a.f7.fw7.ttu.tracked.logout Yes, Go Back
+          a.f7.fw7.ttu.tracked.logout.blue Yes, Go Back

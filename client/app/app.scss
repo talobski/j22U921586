@@ -35,7 +35,7 @@ html, body {
 body {
   font-size: .875rem;
   color: #fff;
-  background-color: #2A2D34;
+  background-color: #E9EBEE;
   padding-top: 1px;
 }
 
@@ -73,6 +73,7 @@ button {
 @import 'main/main';
 @import 'payment/payment';
 @import 'personal-info/personal-info';
+@import 'success/success';
 @import 'tachyons';
 @import '../components/footer/footer';
 @import '../components/themes/textbox';

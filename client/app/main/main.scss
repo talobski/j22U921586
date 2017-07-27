@@ -1,0 +1,43 @@
+.merchant-photo {
+  background-image: url("../assets/images/placeholder_store.png");
+  background-color: #E0E3EA;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.7rem;
+  width: 1.7rem;
+  min-height: 1.7rem;
+  min-width: 1.7rem;
+}
+.item-photo {
+  background-image: url("../assets/images/placeholder_item.png");
+  background-color: #E0E3EA;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2.4rem;
+  width: 2.4rem;
+  min-height: 2.4rem;
+  min-width: 2.4rem;
+}
+.fee {
+  box-shadow: 0 1px 0 0 rgba(#fff, 0.08);
+}
+.fee__icon {
+  height: 1.4rem;
+  width: 1.4rem;
+}
+.fee__icon--delivery {
+  background-image: url("../assets/images/icon_delivery.png");
+}
+.fee__icon--other {
+  background-image: url("../assets/images/icon_other.png");
+}
+.fee__icon--tax {
+  background-image: url("../assets/images/icon_tax.png");
+}
+.invoice-action {
+  cursor: pointer;
+}
+
+.cancel-button {
+  background: #D24A4A;
+}
