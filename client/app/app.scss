@@ -35,7 +35,10 @@ html, body {
 body {
   font-size: .875rem;
   color: #fff;
-  background-color: #E9EBEE;
+  background: #1b3572;
+  background: -moz-linear-gradient(-45deg, #1b3572 0%, #1350a2 20%, #1872b3 50%, #dbf6c8 100%);
+  background: -webkit-linear-gradient(-45deg, #1b3572 0%,#1350a2 20%,#1872b3 50%,#dbf6c8 100%);
+  background: linear-gradient(135deg, #1b3572 0%,#1350a2 20%,#1872b3 50%,#dbf6c8 100%);
   padding-top: 1px;
 }
 
@@ -101,12 +104,24 @@ button {
 }
 
 .green {
-  color: #38af33;
+  color: #3ba76d;
 }
 .bg-green {
-  background-color: #38af33;
+  background-color: #3ba76d;
 }
 
+.brown {
+  color: #868a1d;
+}
+.yellow {
+  color: #f6ff00;
+}
+.bg-yellow {
+  background-color: #f6ff00;
+}
+.b--yellow {
+  border-color: #f6ff00;
+}
 .blue {
   color: #3C82EB;
 }

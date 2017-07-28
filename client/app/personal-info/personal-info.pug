@@ -1,34 +1,36 @@
 .ma3.ma4-l
-  .tc.tracked.animated.fadeInDown.black-50 Personal Info
+  .tc.tracked.animated.fadeInDown.white-80 Personal Info
 .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mt4.mt0-ns
   form.form
     .form-group
       .mb4
-        input.form-control.input-reset(type='text', name='fullname', ng-model='user.full_name', ng-pattern="/^([a-z']+(-| |.)?)+$/i", required='', autocomplete='off')
-        label Full Name *
-        span.bar
+        label.f7.tracked.white-80 Full Name *
+        input.mt1.br2.form-control.input-reset(placeholder="John Doe" type='text', name='fullname', ng-model='user.full_name', ng-pattern="/^([a-z']+(-| |.)?)+$/i", required='', autocomplete='off')
+        //- label Full Name *
+        //- span.bar
         
     .form-group
       .mb4
-        input.form-control.input-reset(type='email', name='email', ng-pattern='/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/', required='', autocomplete='off')
-        label Email*
-        span.bar
+        label.f7.tracked.white-80 Email*
+        input.mt1.br2.form-control.input-reset(placeholder="+63 **** *******" type='email', name='email', ng-pattern='/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/', required='', autocomplete='off')
+        //- label Email*
+        //- span.bar
 
     .form-group
       .mb4
-        input.form-control.input-reset(type='tel', name='mobile', required='', ng-pattern='/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/', autocomplete='off')
-        label Mobile Number*
-        span.bar
+        label.f7.tracked.white-80 Mobile Number*
+        input.mt1.br2.form-control.input-reset(placeholder="johndoe@email.com" type='tel', name='mobile', required='', ng-pattern='/^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/', autocomplete='off')
+        //- span.bar
         
     
     .form-group
       .mb4
         .flex.justify-between
           .flex.justify-end.order-2
-            button.bn.bg-blue.br2.pa3.tc.ttu.tracked.white.f7.fw7.db.order-3(ui-sref="delivery-info")
+            button.bn.bg-yellow.brown.br2.pa3.tc.ttu.tracked.white.f7.fw7.db.order-3(ui-sref="delivery-info")
               span Continue
             .mr3.order-2
-            button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.blue.f7.fw7.db.order-1(ui-sref="main")
+            button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.yellow.f7.fw7.db.order-1(ui-sref="main")
               span Back
           .flex.justify-start.order-1
             button.bn.bg-transparent.br2.pt3.pb3.tc.ttu.tracked.white.f7.fw7.db(ng-show="false")

@@ -1,47 +1,34 @@
 .invoice-main
-  .state.pending
-    .ma3.ma4-l
-      .tc.tracked.animated.fadeInDown.black-50 You are Paying
-    .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
-      .bg-white.black.br2.animated.fadeInDown
-        .pa2
-          .mb0
-            .bb.b--black-10
-              .pb2
-                .flex.items-center.justify-start
-                  img.merchant-photo.mr1.dib.br-100(src='assets/images/placeholder_store.png')
-                  .flex.flex-column
-                    span.f7.fw7.black-80.word-break Demo
-                    span.f7.fw3.black-40 Merchant
-          .mb2
-            .pt3.pb3.pt4-l.pb4-l
-              .flex.flex-column.tc
-                h1.f1.fw3.green.ma0 ₱726.00
+  .mt4
+    
+  .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
+    .bg-white.black.br2.animated.fadeInDown
+      .pa2
+        .mb0
+          .flex.justify-center.items-center
+            .flex.flex-column.tc
+              .pt3.pb3.pt4-l.pb4-l
+                h1.f2.fw3.green.ma0.mb1 ₱736.00
                 span.f7.black-40.ttu.tracked Amount Due
-      .mt2
-        a.bg-blue.br2.pa3.tc.ttu.tracked.white.f7.fw7.db(ui-sref="personal-info") Proceed to payment
-    .ma3.ma4-l
-      .tc.tracked.animated.fadeInDown.black-50 Invoice Details
-    .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mb4
-      .mb2
-        .flex
-          .w-50.bg-white.br2.mr2
-            .pa2.pt3.pb3
-              .flex.items-center.justify-center
-                span.f7.fw3.tracked.black Invoice # 1zRMdkZ
-          .w-50.bg-white.br2
-            .pa2.pt3.pb3
-              .flex.items-center.justify-center
-                span.f7.fw3.tracked.black Expires on Jul 13, 2017
+        .mb0
+          .bt.b--black-10
+            .pt3.pb2
+              .flex.justify-around
+                .tracked.f7.animated.fadeInDown.black-40 Invoice # j22U921586
+                .tracked.f7.animated.fadeInDown.black-40 Expires on Jul 13, 2017
+              
+    //- .ma3
+    //-   .tc.tracked.animated.fadeInDown.white-80 Invoice Details
+    .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l.mb4.mt3
       .bg-white.black-80.br2.overflow-hidden.animated.fadeInDown
         .ma2
-          .mt2.pb2.bb.b--white-10
+          .mt3.pb3.bb.b--white
             .flex.items-center
-              img.item-photo.mr2(src='assets/images/placeholder_item.png')
+              img.item-photo.br2.mr2(src='assets/images/placeholder_item.png')
               .w-100
                 .flex.items-center.justify-between
                   .item-details
-                    h1.f6.fw3.ma0.mb1 Dozen Original Glaze
+                    h1.f6.fw3.ma0.mb1 Demo Item
                     .flex.justify-between
                       .f7
                         span ₱363.00
@@ -50,18 +37,30 @@
                         span {{" "}}
                         span 2
                   .item-total
-                    span.f7.fw7.tracked ₱726.00
-          .bg-white-10.br2
+                    span.green.f7.fw7.tracked ₱726.00
+          .ba.b--black-10.br2
             .pl2.pr2.overflow-hidden
               //- ===== delivery fee ===== -//
               .fee.flex.items-center.justify-between.mt2.pb2
                 .flex.items-center
                   .fee__icon.fee__icon--delivery.br-100.bg-white.bg-center.contain.mr2
                   span.f7.fw3 Delivery Fee                  
-                span.f7.fw7 FREE
+                span.green.f7.fw7 FREE
               //- ===== other fees ===== -//
               .fee.flex.items-center.justify-between.mt2.pb2
                 .flex.items-center
                   .fee__icon.fee__icon--other.br-100.bg-white.bg-center.contain.mr2
-                  span.f7.fw3 {{of.attributes.name || "Other Fees"}}
-                span.f7.fw7 {{of.attributes.amount | currency:"₱"}}
+                  span.f7.fw3 Other Fees
+                span.green.f7.fw7 {{10 | currency:"₱"}}
+
+    .mt3.mb3.mt4-l.mb4-l
+      .w-100.mw6-ns.center.pl2.pr2.pl0-l.pr0-l
+        .flex.justify-between
+          .flex.items-center.justify-start
+            img.merchant-photo.mr1.dib.br2(src='assets/images/store.png')
+            .flex.flex-column
+              span.f5.fw4.white.word-break Demo
+              span.f7.fw3.white-60 Merchant
+          .flex.justify-center.items-center
+            .flex.justify-center
+              a.link.bg-yellow.brown.br2.pa3.tc.ttu.tracked.white.f7.fw7.dib(ui-sref="personal-info") Proceed to payment
